@@ -55,50 +55,47 @@
     <!-- Wrapper for Sticky Footer -->
     <div id="app-container" class="flex flex-col min-h-screen">
         
-        <!-- NEW HEADER: Solid, High Contrast, Clear Buttons -->
-        <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
+        <!-- NEW HEADER: Modern, Sleek, Glassmorphism -->
+        <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-gray-100 transition-all">
             <!-- Brand Color Strip -->
-            <div class="h-1.5 bg-blue-900 w-full"></div>
+            <div class="h-1 bg-blue-900 w-full"></div>
             
-            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
                 
                 <!-- Logo Section -->
                 <div class="flex items-center gap-4 cursor-pointer group" onclick="window.location.hash=''">
-                    <img src="AISA_logo.png" alt="AISA Logo" class="h-12 w-12 md:h-14 md:w-14 object-contain">
-                    <div class="flex flex-col">
-                        <h1 class="text-xl md:text-2xl font-black text-blue-900 tracking-tight leading-none uppercase">AISA</h1>
-                        <span class="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">American International School in Abu Dhabi</span>
+                    <img src="AISA_logo.png" alt="AISA Logo" class="h-10 w-10 md:h-12 md:w-12 object-contain transition-transform group-hover:scale-105">
+                    <div class="flex flex-col justify-center">
+                        <h1 class="text-lg md:text-xl font-black text-blue-900 tracking-tight leading-none uppercase">AISA</h1>
+                        <span class="text-[9px] md:text-[10px] font-semibold text-gray-500 uppercase tracking-widest mt-0.5">American International School</span>
                     </div>
                 </div>
 
-                <!-- Center Navigation: CLEAR SEGMENTED BUTTONS -->
-                <div class="hidden md:flex items-center bg-gray-100 p-1.5 rounded-lg border border-gray-200">
+                <!-- Center Navigation: Clean & Minimalist -->
+                <div class="hidden md:flex items-center gap-2">
                     
                     <!-- PD Button -->
-                    <a href="#pd-section" class="flex items-center px-6 py-3 rounded-md text-sm font-bold text-gray-600 transition-all duration-200 hover:bg-white hover:text-blue-800 hover:shadow-md focus:ring-2 focus:ring-blue-500 mx-0.5">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                        PD MODULES
+                    <a href="#pd-section" class="flex items-center px-4 py-2 rounded-full text-sm font-semibold text-gray-500 transition-all duration-300 hover:bg-blue-50 hover:text-blue-900 focus:ring-2 focus:ring-blue-500/50">
+                        <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        Modules
                     </a>
 
                     <!-- Resources Button -->
-                    <a href="#resources-section" class="flex items-center px-6 py-3 rounded-md text-sm font-bold text-gray-600 transition-all duration-200 hover:bg-white hover:text-blue-800 hover:shadow-md focus:ring-2 focus:ring-blue-500 mx-0.5">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                        RESOURCES
+                    <a href="#resources-section" class="flex items-center px-4 py-2 rounded-full text-sm font-semibold text-gray-500 transition-all duration-300 hover:bg-blue-50 hover:text-blue-900 focus:ring-2 focus:ring-blue-500/50">
+                        <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        Resources
                     </a>
 
                     <!-- Media Hub Button -->
-                    <a href="#media-section" class="flex items-center px-6 py-3 rounded-md text-sm font-bold text-gray-600 transition-all duration-200 hover:bg-white hover:text-blue-800 hover:shadow-md focus:ring-2 focus:ring-blue-500 mx-0.5">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
-                        MEDIA HUB
+                    <a href="#media-section" class="flex items-center px-4 py-2 rounded-full text-sm font-semibold text-gray-500 transition-all duration-300 hover:bg-blue-50 hover:text-blue-900 focus:ring-2 focus:ring-blue-500/50">
+                        <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        Media Hub
                     </a>
                 </div>
 
-                <!-- Right Side (T&L Department) -->
-                <div class="hidden lg:flex items-center gap-3 pl-6 border-l-2 border-gray-100">
-                    <div class="text-right">
-                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Department of</p>
-                        <p class="text-xs font-bold text-blue-900">Teaching & Learning</p>
-                    </div>
+                <!-- Right Side (ESOL School) -->
+                <div class="hidden lg:flex items-center pl-6 border-l border-gray-200 h-8">
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] select-none">An ESOL School</p>
                 </div>
 
             </nav>
@@ -138,12 +135,12 @@
                     <section class="mb-16 searchable-item" data-keywords="intro welcome video orientation">
                         <div class="max-w-4xl mx-auto">
                             <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-                                <div class="aspect-video bg-black relative w-full">
-                                    <!-- Ensure your video file is named 'intro_video.mp4' and is in the same folder -->
-                                    <video controls class="w-full h-full">
-                                        <source src="intro_video.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
+                                <div class="aspect-video bg-slate-900 relative w-full flex items-center justify-center">
+                                    <div class="text-center p-6">
+                                        <span class="text-6xl block mb-4">🎥</span>
+                                        <h4 class="text-2xl md:text-3xl font-bold text-white">Orientation Welcome Video Coming Soon!</h4>
+                                        <p class="text-slate-300 mt-2">Check back shortly for our new introductory guide.</p>
+                                    </div>
                                 </div>
                                 <div class="p-6 text-center bg-blue-50">
                                     <h3 class="text-2xl font-bold text-blue-900 mb-2">Welcome to the Guide</h3>
@@ -182,42 +179,34 @@
                                 </button>
                             </div>
 
-                            <!-- Module: HOTS -->
-                            <div class="searchable-item bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 border-l-4 border-blue-600" data-keywords="hots questions higher order thinking bloom taxonomy recall analyze create">
-                                <div class="flex justify-between items-start mb-3">
-                                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Ongoing Workshop</span>
-                                </div>
-                                <h4 class="text-xl font-semibold mb-2">Higher Order Thinking Questions</h4>
-                                <p class="text-gray-600 mb-4">Learn to design questions that challenge students to analyze, evaluate, and create.</p>
-                                <div class="text-sm text-gray-500 mb-4 border-t pt-3">
-                                    <p class="flex items-center"><svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 2 min video + Strategy Ladder</p>
-                                </div>
-                                <button onclick="window.location.hash='module-hots'" class="w-full bg-blue-800 text-white py-2 rounded-lg hover:bg-blue-900 transition-colors shadow-md flex items-center justify-center">
-                                    Start Module
+                            <!-- Module: Coming Soon Placeholder 1 -->
+                            <div class="searchable-item bg-gray-50 p-6 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-center transition-all duration-300" data-keywords="coming soon placeholder">
+                                <span class="text-4xl mb-3 opacity-50">⏳</span>
+                                <h4 class="text-xl font-semibold text-gray-500 mb-2">Module Coming Soon</h4>
+                                <p class="text-gray-400 mb-4">New professional development content is currently in the works.</p>
+                                <button disabled class="w-full bg-gray-200 text-gray-400 py-2 rounded-lg cursor-not-allowed">
+                                    Not Yet Available
                                 </button>
                             </div>
 
-                            <!-- Module: KWL -->
-                            <div class="searchable-item bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300" data-keywords="kwl charts prior knowledge assessment">
-                                <span class="inline-block bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full mb-3">Most Recent PD</span>
-                                <h4 class="text-xl font-semibold mb-2">KWL Charts & Prior Knowledge</h4>
-                                <p class="text-gray-600 mb-4">Review materials on using KWL charts to assess and build upon student knowledge.</p>
-                                 <div class="text-sm text-gray-500">
-                                    <p><strong>Status:</strong> Materials Available</p>
-                                </div>
-                                <a href="https://brandonabaki-design.github.io/KWL-PD/#interactive-tool" target="_blank" rel="noopener noreferrer">
-                                    <button class="mt-4 w-full bg-gray-700 text-white py-2 rounded-lg hover:bg-gray-800 transition-colors">Access Resources</button>
-                                </a>
+                            <!-- Module: Coming Soon Placeholder 2 -->
+                            <div class="searchable-item bg-gray-50 p-6 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-center transition-all duration-300" data-keywords="coming soon placeholder">
+                                <span class="text-4xl mb-3 opacity-50">⏳</span>
+                                <h4 class="text-xl font-semibold text-gray-500 mb-2">Module Coming Soon</h4>
+                                <p class="text-gray-400 mb-4">New professional development content is currently in the works.</p>
+                                <button disabled class="w-full bg-gray-200 text-gray-400 py-2 rounded-lg cursor-not-allowed">
+                                    Not Yet Available
+                                </button>
                             </div>
                             
-                            <!-- Module: Danielson -->
-                            <div class="searchable-item bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300" data-keywords="danielson framework evaluation observation self-assessment">
-                                 <span class="inline-block bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full mb-3">Self-Assessment</span>
-                                <h4 class="text-xl font-semibold mb-2">Danielson Self-Assessment</h4>
-                                <p class="text-gray-600 mb-4">Access the Danielson Self-Assessment framework and resources to reflect on your practice.</p>
-                                <a href="https://brandonabaki-design.github.io/Danielson-PD/" target="_blank" rel="noopener noreferrer">
-                                    <button class="mt-4 w-full bg-teal-700 text-white py-2 rounded-lg hover:bg-teal-800 transition-colors">Access Tool</button>
-                                </a>
+                            <!-- Module: Coming Soon Placeholder 3 -->
+                            <div class="searchable-item bg-gray-50 p-6 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-center transition-all duration-300" data-keywords="coming soon placeholder">
+                                <span class="text-4xl mb-3 opacity-50">⏳</span>
+                                <h4 class="text-xl font-semibold text-gray-500 mb-2">Module Coming Soon</h4>
+                                <p class="text-gray-400 mb-4">New professional development content is currently in the works.</p>
+                                <button disabled class="w-full bg-gray-200 text-gray-400 py-2 rounded-lg cursor-not-allowed">
+                                    Not Yet Available
+                                </button>
                             </div>
                         </div>
 
@@ -231,7 +220,7 @@
                                 <p class="text-gray-700">Interested in mastering advanced AI tools for the classroom? Join us for an exclusive deep-dive session.</p>
                             </div>
                             <div class="flex-shrink-0 w-full md:w-auto">
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScpCjtK68_9XsClcMTgf8HNvbXFl2lKzC3bpN_4oHKl2BAzeA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeN_BO2PljIaKgvU-Khn-Zzr0mHsuyXTSamizOU3bV3rWhm-w/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
                                     <button class="w-full md:w-auto bg-purple-700 text-white py-3 px-8 rounded-lg hover:bg-purple-800 transition-colors shadow-md font-semibold whitespace-nowrap flex items-center justify-center">
                                         <span class="mr-2">✨</span> Reserve Your Spot
                                     </button>
@@ -285,12 +274,12 @@
                                 </div>
                             </a>
 
-                            <!-- Tool 3: ELL Prompt Generator -->
-                            <a href="https://brandonabaki-design.github.io/ELL-Prompt-Generator-Sample/" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="ell prompt generator ai english language learners esl">
+                            <!-- Tool 3: Magic School AI -->
+                            <a href="https://www.magicschool.ai/" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="magic school ai lesson planning tools generator">
                                 <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-green-50">
-                                    <div class="text-4xl text-blue-600 mb-3">💬</div>
-                                    <h4 class="text-lg font-semibold mb-2">ELL Prompt Generator</h4>
-                                    <p class="text-sm text-gray-600">Generate tailored AI prompts to support English Language Learners.</p>
+                                    <div class="text-4xl text-blue-600 mb-3">🪄</div>
+                                    <h4 class="text-lg font-semibold mb-2">Magic School AI</h4>
+                                    <p class="text-sm text-gray-600">The leading AI platform for educators to help with lesson planning, grading, and more.</p>
                                 </div>
                             </a>
 
@@ -326,7 +315,7 @@
                             </div>
 
                             <!-- Tool: Online Learning Guide -->
-                            <a href="https://brandonabaki-design.github.io/Online-Learning-Guidelines/" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="online learning guide distance remote virtual instruction e-learning">
+                            <a href="#" class="maintenance-link block searchable-item" data-keywords="online learning guide distance remote virtual instruction e-learning">
                                 <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-teal-100">
                                     <div class="text-4xl mb-3">💻</div>
                                     <h4 class="text-lg font-semibold mb-2">Online Learning Guide</h4>
@@ -346,20 +335,36 @@
                             <p class="text-purple-100 text-center max-w-2xl">Catch up on our latest podcasts and community updates.</p>
                         </div>
 
-                        <div class="max-w-4xl mx-auto">
+                        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
                             <!-- Podcasts -->
-                            <div class="bg-white p-8 rounded-lg shadow-lg searchable-item text-center" data-keywords="podcast audio media listen educator echo">
+                            <div class="bg-white p-8 rounded-lg shadow-lg searchable-item text-center flex flex-col h-full" data-keywords="podcast audio media listen educator echo">
                                 <div class="flex items-center justify-center mb-4">
                                     <div class="p-3 bg-blue-100 rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
                                     </div>
                                 </div>
                                 <h4 class="text-2xl font-bold mb-2 text-blue-900">The Educator's Echo Podcast</h4>
-                                <p class="text-gray-600 mb-6">Listen to interviews, strategies, and insights from the Teaching & Learning Department. Access our complete library of episodes below.</p>
+                                <p class="text-gray-600 mb-6 flex-grow">Listen to interviews, strategies, and insights from the Teaching & Learning Department. Access our complete library of episodes below.</p>
                                 
-                                <a href="https://wschoolae-my.sharepoint.com/:f:/g/personal/brandon_walid_wschool_ae/ElrAgnk2gNpFjJL11hQqhRABgmCGuJedRI38QR3vs8lBXw?e=w2nYI2" target="_blank" rel="noopener noreferrer">
-                                    <button class="bg-blue-800 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-900 transition-transform hover:scale-105 shadow-md flex items-center mx-auto">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="mt-auto block">
+                                    <button class="bg-blue-800 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-900 transition-transform hover:scale-105 shadow-md flex items-center justify-center mx-auto w-full">
                                         <span class="mr-2">📂</span> Access Full Podcast Archive
+                                    </button>
+                                </a>
+                            </div>
+
+                            <!-- Newsletters -->
+                            <div class="bg-white p-8 rounded-lg shadow-lg searchable-item text-center flex flex-col h-full" data-keywords="newsletter updates news reading">
+                                <div class="flex items-center justify-center mb-4">
+                                    <div class="p-3 bg-purple-100 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15M9 11l3 3m0 0l3-3m-3 3V8" /></svg>
+                                    </div>
+                                </div>
+                                <h4 class="text-2xl font-bold mb-2 text-purple-900">T&L Newsletters</h4>
+                                <p class="text-gray-600 mb-6 flex-grow">Read the latest updates, teaching tips, and community highlights in our weekly newsletters.</p>
+                                <a href="#" class="maintenance-link mt-auto block">
+                                    <button class="bg-purple-800 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-900 transition-transform hover:scale-105 shadow-md flex items-center justify-center mx-auto w-full">
+                                        <span class="mr-2">📰</span> Read Newsletters
                                     </button>
                                 </a>
                             </div>
@@ -933,7 +938,7 @@
                         <div>
                             <strong class="text-gray-900">Email:</strong>
                             <div class="flex items-center space-x-2">
-                                <p id="copy-email" class="block text-blue-600 cursor-pointer hover:underline">brandon.walid@aisa.sch.ae</p>
+                                <p id="copy-email" class="block text-blue-600 cursor-pointer hover:underline">bbaki@aisa.sch.ae</p>
                                 <span id="email-copied-msg" class="text-sm text-green-600 hidden">Copied!</span>
                             </div>
                         </div>
@@ -1117,7 +1122,7 @@
 
         if (copyEmailEl) {
             copyEmailEl.addEventListener('click', () => {
-                copyToClipboard('brandon.walid@aisa.sch.ae', emailCopiedMsg);
+                copyToClipboard('bbaki@aisa.sch.ae', emailCopiedMsg);
             });
         }
 
