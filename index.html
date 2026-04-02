@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AISA | Teaching & Learning Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            /* Updated to a modern, high-quality generic school campus image */
+            background-image: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 31, 62, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        /* Infographic Styles */
+        .ladder-step {
+            transition: all 0.3s ease;
+        }
+        .ladder-step:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        /* Smooth transition for filtering */
+        .searchable-item {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Wrapper for Sticky Footer -->
+    <div id="app-container" class="flex flex-col min-h-screen">
+        
+        <!-- NEW HEADER: Solid, High Contrast, Clear Buttons -->
+        <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
+            <!-- Brand Color Strip -->
+            <div class="h-1.5 bg-blue-900 w-full"></div>
+            
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                
+                <!-- Logo Section -->
+                <div class="flex items-center gap-4 cursor-pointer group" onclick="window.location.hash=''">
+                    <img src="AISA_logo.png" alt="AISA Logo" class="h-12 w-12 md:h-14 md:w-14 object-contain">
+                    <div class="flex flex-col">
+                        <h1 class="text-xl md:text-2xl font-black text-blue-900 tracking-tight leading-none uppercase">AISA</h1>
+                        <span class="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">American International School in Abu Dhabi</span>
+                    </div>
+                </div>
+
+                <!-- Center Navigation: CLEAR SEGMENTED BUTTONS -->
+                <div class="hidden md:flex items-center bg-gray-100 p-1.5 rounded-lg border border-gray-200">
+                    
+                    <!-- PD Button -->
+                    <a href="#pd-section" class="flex items-center px-6 py-3 rounded-md text-sm font-bold text-gray-600 transition-all duration-200 hover:bg-white hover:text-blue-800 hover:shadow-md focus:ring-2 focus:ring-blue-500 mx-0.5">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        PD MODULES
+                    </a>
+
+                    <!-- Resources Button -->
+                    <a href="#resources-section" class="flex items-center px-6 py-3 rounded-md text-sm font-bold text-gray-600 transition-all duration-200 hover:bg-white hover:text-blue-800 hover:shadow-md focus:ring-2 focus:ring-blue-500 mx-0.5">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        RESOURCES
+                    </a>
+
+                    <!-- Media Hub Button -->
+                    <a href="#media-section" class="flex items-center px-6 py-3 rounded-md text-sm font-bold text-gray-600 transition-all duration-200 hover:bg-white hover:text-blue-800 hover:shadow-md focus:ring-2 focus:ring-blue-500 mx-0.5">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        MEDIA HUB
+                    </a>
+                </div>
+
+                <!-- Right Side (T&L Department) -->
+                <div class="hidden lg:flex items-center gap-3 pl-6 border-l-2 border-gray-100">
+                    <div class="text-right">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Department of</p>
+                        <p class="text-xs font-bold text-blue-900">Teaching & Learning</p>
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+
+        <!-- Main Content Area (Grows to push footer down) -->
+        <main class="flex-grow bg-gray-50">
+            
+            <!-- HOME PAGE VIEW -->
+            <div id="main-content">
+                
+                <!-- Hero Section with Search -->
+                <section class="hero-section text-white relative">
+                    <div class="container mx-auto px-6 py-24 text-center">
+                        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">Elevating Education, Together.</h2>
+                        <p class="text-lg md:text-xl max-w-3xl mx-auto text-blue-50 mb-8 drop-shadow-md">
+                            Welcome to the central hub for professional growth at the American International School in Abu Dhabi.
+                        </p>
+                        
+                        <!-- SEARCH BAR -->
+                        <div class="max-w-2xl mx-auto relative group">
+                            <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-gray-400 group-focus-within:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </div>
+                            <input type="text" id="global-search" 
+                                   class="block w-full pl-12 pr-4 py-4 rounded-full text-gray-900 bg-white/95 backdrop-blur-md shadow-xl border border-white/20 focus:ring-4 focus:ring-blue-400/30 focus:outline-none transition-all placeholder-gray-400 font-medium" 
+                                   placeholder="Search for PD, strategies, MAP guide, or tools...">
+                            <div class="absolute inset-y-0 right-0 pr-4 flex items-center">
+                                <span class="text-[10px] font-bold text-gray-400 bg-gray-100 border border-gray-200 rounded px-2 py-1 hidden md:block">CMD + K</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="container mx-auto px-6 py-12">
+                    <!-- Intro Video Section -->
+                    <section class="mb-16 searchable-item" data-keywords="intro welcome video orientation">
+                        <div class="max-w-4xl mx-auto">
+                            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                                <div class="aspect-video bg-black relative w-full">
+                                    <!-- Ensure your video file is named 'intro_video.mp4' and is in the same folder -->
+                                    <video controls class="w-full h-full">
+                                        <source src="intro_video.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="p-6 text-center bg-blue-50">
+                                    <h3 class="text-2xl font-bold text-blue-900 mb-2">Welcome to the Guide</h3>
+                                    <p class="text-gray-700">Watch this brief introduction to understand the purpose of this website and how to navigate it.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Professional Development Section -->
+                    <section id="pd-section" class="mb-16">
+                        <!-- Colored Header Card -->
+                        <div class="bg-gradient-to-r from-blue-700 to-indigo-800 rounded-xl p-6 mb-8 text-white shadow-lg flex flex-col items-center justify-center transform transition-transform hover:scale-[1.01]">
+                            <h3 class="text-3xl font-extrabold flex items-center mb-2">
+                                <span class="text-4xl mr-3">🎓</span> Professional Development
+                            </h3>
+                            <p class="text-blue-100 text-center max-w-2xl">Engage in continuous learning with our curated workshops and training sessions designed to foster innovation in the classroom.</p>
+                        </div>
+                        
+                        <!-- Main Grid -->
+                        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+                            
+                            <!-- Module: Success Criteria -->
+                            <div class="searchable-item bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 border-l-4 border-indigo-600" data-keywords="objectives success criteria lesson planning goals cognitive">
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full">New Module</span>
+                                    <span class="text-indigo-600 text-xs uppercase font-bold tracking-wide">Must Watch</span>
+                                </div>
+                                <h4 class="text-xl font-bold mb-2 text-gray-900">Objectives & Success Criteria</h4>
+                                <p class="text-gray-600 mb-4 text-sm">Master the art of crafting clear learning objectives and tiered success criteria.</p>
+                                <div class="text-sm text-gray-500 mb-4 border-t pt-3">
+                                    <p class="flex items-center"><svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 5 min video + Resources</p>
+                                </div>
+                                <button onclick="window.location.hash='module-objectives'" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-md flex items-center justify-center">
+                                    Start Module
+                                </button>
+                            </div>
+
+                            <!-- Module: HOTS -->
+                            <div class="searchable-item bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 border-l-4 border-blue-600" data-keywords="hots questions higher order thinking bloom taxonomy recall analyze create">
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Ongoing Workshop</span>
+                                </div>
+                                <h4 class="text-xl font-semibold mb-2">Higher Order Thinking Questions</h4>
+                                <p class="text-gray-600 mb-4">Learn to design questions that challenge students to analyze, evaluate, and create.</p>
+                                <div class="text-sm text-gray-500 mb-4 border-t pt-3">
+                                    <p class="flex items-center"><svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 2 min video + Strategy Ladder</p>
+                                </div>
+                                <button onclick="window.location.hash='module-hots'" class="w-full bg-blue-800 text-white py-2 rounded-lg hover:bg-blue-900 transition-colors shadow-md flex items-center justify-center">
+                                    Start Module
+                                </button>
+                            </div>
+
+                            <!-- Module: KWL -->
+                            <div class="searchable-item bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300" data-keywords="kwl charts prior knowledge assessment">
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full mb-3">Most Recent PD</span>
+                                <h4 class="text-xl font-semibold mb-2">KWL Charts & Prior Knowledge</h4>
+                                <p class="text-gray-600 mb-4">Review materials on using KWL charts to assess and build upon student knowledge.</p>
+                                 <div class="text-sm text-gray-500">
+                                    <p><strong>Status:</strong> Materials Available</p>
+                                </div>
+                                <a href="https://brandonabaki-design.github.io/KWL-PD/#interactive-tool" target="_blank" rel="noopener noreferrer">
+                                    <button class="mt-4 w-full bg-gray-700 text-white py-2 rounded-lg hover:bg-gray-800 transition-colors">Access Resources</button>
+                                </a>
+                            </div>
+                            
+                            <!-- Module: Danielson -->
+                            <div class="searchable-item bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300" data-keywords="danielson framework evaluation observation self-assessment">
+                                 <span class="inline-block bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full mb-3">Self-Assessment</span>
+                                <h4 class="text-xl font-semibold mb-2">Danielson Self-Assessment</h4>
+                                <p class="text-gray-600 mb-4">Access the Danielson Self-Assessment framework and resources to reflect on your practice.</p>
+                                <a href="https://brandonabaki-design.github.io/Danielson-PD/" target="_blank" rel="noopener noreferrer">
+                                    <button class="mt-4 w-full bg-teal-700 text-white py-2 rounded-lg hover:bg-teal-800 transition-colors">Access Tool</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Featured Banner: AI Training -->
+                        <div class="searchable-item mt-8 bg-gradient-to-r from-purple-50 to-white rounded-xl p-8 border border-purple-100 flex flex-col md:flex-row items-center justify-between shadow-sm hover:shadow-md transition-shadow" data-keywords="ai artificial intelligence training robot workshop">
+                            <div class="mb-6 md:mb-0 md:mr-8 max-w-2xl">
+                                <div class="flex items-center mb-3">
+                                    <span class="inline-block bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full">Special Training Event</span>
+                                </div>
+                                <h4 class="text-2xl font-bold text-purple-900 mb-2">Additional AI Training</h4>
+                                <p class="text-gray-700">Interested in mastering advanced AI tools for the classroom? Join us for an exclusive deep-dive session.</p>
+                            </div>
+                            <div class="flex-shrink-0 w-full md:w-auto">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScpCjtK68_9XsClcMTgf8HNvbXFl2lKzC3bpN_4oHKl2BAzeA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+                                    <button class="w-full md:w-auto bg-purple-700 text-white py-3 px-8 rounded-lg hover:bg-purple-800 transition-colors shadow-md font-semibold whitespace-nowrap flex items-center justify-center">
+                                        <span class="mr-2">✨</span> Reserve Your Spot
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- Resources & Strategies Section -->
+                    <section id="resources-section" class="mb-16">
+                         <!-- Colored Header Card -->
+                        <div class="bg-gradient-to-r from-teal-600 to-green-700 rounded-xl p-6 mb-8 text-white shadow-lg flex flex-col items-center justify-center transform transition-transform hover:scale-[1.01]">
+                            <h3 class="text-3xl font-extrabold flex items-center mb-2">
+                                <span class="text-4xl mr-3">🛠️</span> Tools and Resources
+                            </h3>
+                            <p class="text-teal-100 text-center max-w-2xl">Access a library of proven teaching strategies, innovative tools, and downloadable resources to support your daily instruction.</p>
+                        </div>
+                         
+                         <!-- Grid for filtering -->
+                         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                             <!-- Twinkl Module -->
+                            <div class="searchable-item h-full" data-keywords="twinkl resources worksheets planning primary secondary">
+                                <button onclick="window.location.hash='module-twinkl'" class="block w-full text-left h-full">
+                                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-pink-100 flex flex-col items-center justify-center">
+                                        <div class="mb-3 h-12 w-full flex items-center justify-center">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Twinkl_Logo_300dpi.jpg" alt="Twinkl Logo" class="h-full object-contain">
+                                        </div>
+                                        <h4 class="text-lg font-semibold mb-2">Twinkl Resources</h4>
+                                        <p class="text-sm text-gray-600">Instant access to teacher-created planning and assessment materials.</p>
+                                    </div>
+                                </button>
+                            </div>
+                            
+                            <!-- Tool 1: Gemini Storybooks -->
+                            <a href="https://gemini.google/overview/storybook/" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="gemini storybooks ai reading english">
+                                <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-purple-50">
+                                    <div class="text-4xl text-blue-600 mb-3">✨</div>
+                                    <h4 class="text-lg font-semibold mb-2">Gemini Storybooks</h4>
+                                    <p class="text-sm text-gray-600">Create engaging, personalized stories for your students with AI.</p>
+                                </div>
+                            </a>
+
+                            <!-- Tool 2: NotebookLM -->
+                            <a href="https://notebooklm.google/" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="notebooklm research ai study notes google">
+                                <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-blue-50">
+                                    <div class="text-4xl text-blue-600 mb-3">📓</div>
+                                    <h4 class="text-lg font-semibold mb-2">NotebookLM</h4>
+                                    <p class="text-sm text-gray-600">Your personalized AI research assistant and study companion.</p>
+                                </div>
+                            </a>
+
+                            <!-- Tool 3: ELL Prompt Generator -->
+                            <a href="https://brandonabaki-design.github.io/ELL-Prompt-Generator-Sample/" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="ell prompt generator ai english language learners esl">
+                                <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-green-50">
+                                    <div class="text-4xl text-blue-600 mb-3">💬</div>
+                                    <h4 class="text-lg font-semibold mb-2">ELL Prompt Generator</h4>
+                                    <p class="text-sm text-gray-600">Generate tailored AI prompts to support English Language Learners.</p>
+                                </div>
+                            </a>
+
+                            <!-- Strategy Card -->
+                            <a href="#" class="maintenance-link block searchable-item" data-keywords="differentiation needs inclusive support">
+                                <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full">
+                                    <div class="text-4xl text-blue-600 mb-3">🧠</div>
+                                    <h4 class="text-lg font-semibold mb-2">Differentiated Instruction</h4>
+                                    <p class="text-sm text-gray-600">Techniques to meet the needs of every learner.</p>
+                                </div>
+                            </a>
+
+                            <!-- Tool: PIRLSpal -->
+                            <a href="https://brandonabaki-design.github.io/PIRLS-pal/" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="pirls test reading literacy pal students parents teachers expectations">
+                                <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-indigo-100">
+                                    <div class="text-4xl mb-3">📚</div>
+                                    <h4 class="text-lg font-semibold mb-2">PIRLSpal</h4>
+                                    <p class="text-sm text-gray-600">A guide to help students, teachers, and parents prepare for the PIRLS test.</p>
+                                </div>
+                            </a>
+                             
+                            <!-- Module: MAP Test Guide -->
+                            <div class="searchable-item h-full" data-keywords="map testing growth rit score assessment adaptive">
+                                <button onclick="window.location.hash='module-map'" class="block w-full text-left h-full">
+                                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border-l-4 border-orange-400 flex flex-col items-center justify-center">
+                                        <div class="mb-3 h-12 w-full flex items-center justify-center">
+                                            <img src="nwea_MAP_logo.jpg" alt="NWEA MAP Logo" class="h-10 object-contain">
+                                        </div>
+                                        <h4 class="text-lg font-bold mb-2">MAP Growth Guide</h4>
+                                        <p class="text-sm text-gray-600">Understand the adaptive nature of MAP testing and RIT scores.</p>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <!-- Tool: Online Learning Guide -->
+                            <a href="https://brandonabaki-design.github.io/Online-Learning-Guidelines/" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="online learning guide distance remote virtual instruction e-learning">
+                                <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-teal-100">
+                                    <div class="text-4xl mb-3">💻</div>
+                                    <h4 class="text-lg font-semibold mb-2">Online Learning Guide</h4>
+                                    <p class="text-sm text-gray-600">Essential guidelines and best practices for effective virtual instruction.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Media Hub Section -->
+                    <section id="media-section" class="mb-16">
+                         <!-- Colored Header Card -->
+                        <div class="bg-gradient-to-r from-purple-700 to-pink-700 rounded-xl p-6 mb-8 text-white shadow-lg flex flex-col items-center justify-center transform transition-transform hover:scale-[1.01]">
+                            <h3 class="text-3xl font-extrabold flex items-center mb-2">
+                                <span class="text-4xl mr-3">🎙️</span> Media Hub
+                            </h3>
+                            <p class="text-purple-100 text-center max-w-2xl">Catch up on our latest podcasts and community updates.</p>
+                        </div>
+
+                        <div class="max-w-4xl mx-auto">
+                            <!-- Podcasts -->
+                            <div class="bg-white p-8 rounded-lg shadow-lg searchable-item text-center" data-keywords="podcast audio media listen educator echo">
+                                <div class="flex items-center justify-center mb-4">
+                                    <div class="p-3 bg-blue-100 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                                    </div>
+                                </div>
+                                <h4 class="text-2xl font-bold mb-2 text-blue-900">The Educator's Echo Podcast</h4>
+                                <p class="text-gray-600 mb-6">Listen to interviews, strategies, and insights from the Teaching & Learning Department. Access our complete library of episodes below.</p>
+                                
+                                <a href="https://wschoolae-my.sharepoint.com/:f:/g/personal/brandon_walid_wschool_ae/ElrAgnk2gNpFjJL11hQqhRABgmCGuJedRI38QR3vs8lBXw?e=w2nYI2" target="_blank" rel="noopener noreferrer">
+                                    <button class="bg-blue-800 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-900 transition-transform hover:scale-105 shadow-md flex items-center mx-auto">
+                                        <span class="mr-2">📂</span> Access Full Podcast Archive
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Maintenance Section (Hidden by default) -->
+            <section id="maintenance-section" class="hidden min-h-screen bg-gray-50 flex items-center justify-center p-4">
+                <div class="text-center bg-white p-8 sm:p-12 rounded-lg shadow-xl max-w-md w-full">
+                    <div class="text-6xl mb-4">🚧</div>
+                    <h1 class="text-3xl font-bold text-blue-900 mb-2">Page Under Construction</h1>
+                    <p class="text-gray-600 mb-8">We're sorry, this page is currently undergoing maintenance. Please check back soon!</p>
+                    <button onclick="window.location.hash=''" class="bg-blue-800 text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors w-full sm:w-auto">
+                        Return to Homepage
+                    </button>
+                </div>
+            </section>
+
+            <!-- HOTS Details Section -->
+            <section id="hots-details-section" class="hidden min-h-screen bg-gray-100 p-4 lg:p-12">
+                <div class="container mx-auto max-w-5xl">
+                    <!-- Header -->
+                    <div class="mb-8 flex items-center justify-between">
+                        <div>
+                            <h1 class="text-3xl lg:text-4xl font-extrabold text-blue-900 leading-tight">Higher Order Thinking (HOTS)</h1>
+                            <p class="text-blue-600 font-medium text-lg mt-2">Moving Beyond Recall</p>
+                        </div>
+                        <button onclick="window.location.hash=''" class="hidden md:flex items-center text-gray-500 hover:text-blue-900 transition-colors">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                            Back to Guide
+                        </button>
+                    </div>
+
+                    <!-- Video Container -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+                        <div class="aspect-video bg-black relative w-full">
+                            <iframe class="w-full h-full absolute top-0 left-0" 
+                                    src="https://www.youtube.com/embed/W9t2sPFZVJQ?rel=0&playsinline=1" 
+                                    title="Higher Order Thinking Video" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-6 bg-blue-50 border-t border-blue-100">
+                            <h3 class="font-bold text-blue-900 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                PD Session Overview
+                            </h3>
+                            <p class="text-sm text-blue-800 mt-1">Explore the 6 levels of cognitive complexity and learn how to ask questions that challenge students to apply, analyze, and create.</p>
+                        </div>
+                    </div>
+
+                    <!-- Infographic: The Thinking Ladder -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">The Thinking Ladder: From Recall to Creation</h3>
+                        <div class="flex flex-col space-y-3 max-w-4xl mx-auto">
+                            <!-- Levels 1-6 -->
+                            <!-- Level 6: Create -->
+                            <div class="ladder-step flex flex-col md:flex-row bg-purple-600 text-white rounded-lg shadow-lg overflow-hidden relative z-50 transform md:-translate-x-0">
+                                <div class="p-6 md:w-1/3 font-bold text-xl flex items-center justify-center bg-purple-700"><span>🚀 Create</span></div>
+                                <div class="p-6 md:w-2/3 bg-purple-600 flex flex-col justify-center"><p class="font-semibold mb-1 opacity-90">Combining parts to make a new whole</p><p class="text-sm italic text-purple-100">"How would you design...?" "What would happen if...?"</p></div>
+                            </div>
+                            <!-- Level 5: Evaluate -->
+                            <div class="ladder-step flex flex-col md:flex-row bg-pink-600 text-white rounded-lg shadow-lg overflow-hidden relative z-40 md:ml-4">
+                                <div class="p-6 md:w-1/3 font-bold text-xl flex items-center justify-center bg-pink-700"><span>⚖️ Evaluate</span></div>
+                                <div class="p-6 md:w-2/3 bg-pink-600 flex flex-col justify-center"><p class="font-semibold mb-1 opacity-90">Judging the value of information</p><p class="text-sm italic text-pink-100">"Do you agree with...?" "Prioritize the best solution..."</p></div>
+                            </div>
+                            <!-- Level 4: Analyze -->
+                            <div class="ladder-step flex flex-col md:flex-row bg-orange-500 text-white rounded-lg shadow-lg overflow-hidden relative z-30 md:ml-8">
+                                <div class="p-6 md:w-1/3 font-bold text-xl flex items-center justify-center bg-orange-600"><span>🔍 Analyze</span></div>
+                                <div class="p-6 md:w-2/3 bg-orange-500 flex flex-col justify-center"><p class="font-semibold mb-1 opacity-90">Breaking down information into component parts</p><p class="text-sm italic text-orange-100">"What is the relationship between...?" "Compare and contrast..."</p></div>
+                            </div>
+                            <!-- Level 3: Apply -->
+                            <div class="ladder-step flex flex-col md:flex-row bg-yellow-500 text-white rounded-lg shadow-lg overflow-hidden relative z-20 md:ml-12">
+                                <div class="p-6 md:w-1/3 font-bold text-xl flex items-center justify-center bg-yellow-600"><span>🛠️ Apply</span></div>
+                                <div class="p-6 md:w-2/3 bg-yellow-500 flex flex-col justify-center"><p class="font-semibold mb-1 opacity-90">Applying the facts to a new situation</p><p class="text-sm italic text-yellow-100">"How would you use...?" "Solve this using..."</p></div>
+                            </div>
+                             <!-- Level 2: Understand -->
+                            <div class="ladder-step flex flex-col md:flex-row bg-green-500 text-white rounded-lg shadow-lg overflow-hidden relative z-10 md:ml-16">
+                                <div class="p-6 md:w-1/3 font-bold text-xl flex items-center justify-center bg-green-600"><span>💡 Understand</span></div>
+                                <div class="p-6 md:w-2/3 bg-green-500 flex flex-col justify-center"><p class="font-semibold mb-1 opacity-90">Understanding what the facts mean</p><p class="text-sm italic text-green-100">"Summarize the main idea..." "Explain in your own words..."</p></div>
+                            </div>
+                             <!-- Level 1: Remember -->
+                            <div class="ladder-step flex flex-col md:flex-row bg-blue-500 text-white rounded-lg shadow-lg overflow-hidden relative z-0 md:ml-20">
+                                <div class="p-6 md:w-1/3 font-bold text-xl flex items-center justify-center bg-blue-600"><span>🧠 Remember</span></div>
+                                <div class="p-6 md:w-2/3 bg-blue-500 flex flex-col justify-center"><p class="font-semibold mb-1 opacity-90">Recognizing and recalling facts</p><p class="text-sm italic text-blue-100">"List the..." "Define..." "Who, What, Where...?"</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NEW: Question Transformation Lab -->
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden mb-16">
+                        <div class="bg-gradient-to-r from-slate-800 to-blue-900 p-8 text-white">
+                            <div class="flex items-center justify-center mb-2">
+                                <span class="text-4xl mr-3">⚗️</span>
+                                <h3 class="text-3xl font-extrabold tracking-tight">Question Transformation Lab</h3>
+                            </div>
+                            <p class="text-blue-100 text-center font-medium text-lg">The Art of Upgrading Cognitive Demand</p>
+                        </div>
+                        
+                        <div class="p-8 lg:p-12 bg-gray-50">
+                            
+                            <!-- Example 1 -->
+                            <div class="relative bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8 group hover:shadow-md transition-shadow">
+                                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-blue-200">
+                                    Science Example
+                                </div>
+                                
+                                <div class="flex flex-col md:flex-row items-stretch gap-6">
+                                    <!-- LOTS Side -->
+                                    <div class="flex-1 bg-red-50/50 rounded-xl p-6 border-l-4 border-red-300 relative">
+                                        <div class="flex justify-between items-start mb-3">
+                                            <span class="bg-red-100 text-red-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Level 1: Remember</span>
+                                            <span class="text-2xl opacity-50">🧠</span>
+                                        </div>
+                                        <p class="text-gray-500 font-mono text-sm mb-2">The Ask:</p>
+                                        <p class="text-lg font-bold text-gray-800">"What is photosynthesis?"</p>
+                                        <p class="text-xs text-red-400 mt-3 italic">⚠️ Requires only memory recall.</p>
+                                    </div>
+
+                                    <!-- Transformation Arrow (Desktop) -->
+                                    <div class="hidden md:flex flex-col justify-center items-center w-16 relative">
+                                        <div class="h-full w-0.5 bg-gray-200 absolute"></div>
+                                        <div class="z-10 bg-white border-2 border-green-500 rounded-full p-2 text-green-600 shadow-sm">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                                        </div>
+                                        <div class="z-10 mt-2 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap shadow-sm">
+                                            + Comparison & Context
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Transformation Arrow (Mobile) -->
+                                    <div class="flex md:hidden justify-center items-center py-2 text-green-500">
+                                        <svg class="w-8 h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                                    </div>
+
+                                    <!-- HOTS Side -->
+                                    <div class="flex-1 bg-green-50/50 rounded-xl p-6 border-l-4 border-green-500 relative">
+                                        <div class="flex justify-between items-start mb-3">
+                                            <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Level 4: Analyze</span>
+                                            <span class="text-2xl opacity-50">🔬</span>
+                                        </div>
+                                        <p class="text-gray-500 font-mono text-sm mb-2">The Upgrade:</p>
+                                        <p class="text-lg font-bold text-gray-900">"Compare how photosynthesis differs in a cactus versus a fern given their environments."</p>
+                                        <p class="text-xs text-green-600 mt-3 italic">✅ Requires analysis of conditions and biological adaptation.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Example 2 -->
+                            <div class="relative bg-white rounded-2xl shadow-sm border border-gray-200 p-6 group hover:shadow-md transition-shadow">
+                                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-purple-200">
+                                    Literature Example
+                                </div>
+                                
+                                <div class="flex flex-col md:flex-row items-stretch gap-6">
+                                    <!-- LOTS Side -->
+                                    <div class="flex-1 bg-red-50/50 rounded-xl p-6 border-l-4 border-red-300 relative">
+                                        <div class="flex justify-between items-start mb-3">
+                                            <span class="bg-red-100 text-red-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Level 2: Understand</span>
+                                            <span class="text-2xl opacity-50">📖</span>
+                                        </div>
+                                        <p class="text-gray-500 font-mono text-sm mb-2">The Ask:</p>
+                                        <p class="text-lg font-bold text-gray-800">"Identify the main character's decision in Chapter 3."</p>
+                                        <p class="text-xs text-red-400 mt-3 italic">⚠️ Requires identifying facts from text.</p>
+                                    </div>
+
+                                    <!-- Transformation Arrow (Desktop) -->
+                                    <div class="hidden md:flex flex-col justify-center items-center w-16 relative">
+                                        <div class="h-full w-0.5 bg-gray-200 absolute"></div>
+                                        <div class="z-10 bg-white border-2 border-purple-500 rounded-full p-2 text-purple-600 shadow-sm">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                                        </div>
+                                        <div class="z-10 mt-2 bg-purple-100 text-purple-800 text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap shadow-sm">
+                                            + "What If" Scenario
+                                        </div>
+                                    </div>
+
+                                    <!-- Transformation Arrow (Mobile) -->
+                                    <div class="flex md:hidden justify-center items-center py-2 text-purple-500">
+                                        <svg class="w-8 h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                                    </div>
+
+                                    <!-- HOTS Side -->
+                                    <div class="flex-1 bg-purple-50/50 rounded-xl p-6 border-l-4 border-purple-500 relative">
+                                        <div class="flex justify-between items-start mb-3">
+                                            <span class="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Level 6: Create</span>
+                                            <span class="text-2xl opacity-50">🚀</span>
+                                        </div>
+                                        <p class="text-gray-500 font-mono text-sm mb-2">The Upgrade:</p>
+                                        <p class="text-lg font-bold text-gray-900">"Predict how the story would end if the character made the opposite choice in Chapter 3."</p>
+                                        <p class="text-xs text-purple-600 mt-3 italic">✅ Requires synthesis of character traits and plot projection.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pro Tip Box -->
+                            <div class="mt-8 p-5 bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl flex items-start shadow-sm">
+                                <div class="bg-yellow-100 p-2 rounded-lg mr-4">
+                                    <span class="text-2xl">💡</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-yellow-900 text-lg">Instant Upgrade Formula</h4>
+                                    <p class="text-yellow-800 mt-1">Don't rewrite the whole lesson. Just add one of these stems to your existing question:</p>
+                                    <div class="flex flex-wrap gap-2 mt-3">
+                                        <span class="bg-white border border-yellow-200 text-yellow-800 px-3 py-1 rounded-md text-sm font-semibold shadow-sm">"How would you change..."</span>
+                                        <span class="bg-white border border-yellow-200 text-yellow-800 px-3 py-1 rounded-md text-sm font-semibold shadow-sm">"Justify why..."</span>
+                                        <span class="bg-white border border-yellow-200 text-yellow-800 px-3 py-1 rounded-md text-sm font-semibold shadow-sm">"What if..."</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center">
+                         <button onclick="window.location.hash=''" class="bg-blue-800 text-white py-3 px-8 rounded-full hover:bg-blue-900 transition-colors shadow-lg font-semibold">
+                            Return to Dashboard
+                        </button>
+                    </div>
+                     <!-- Mobile Return Button -->
+                    <div class="mt-8 md:hidden text-center">
+                         <button class="text-gray-500 hover:text-blue-900 underline" onclick="window.location.hash=''">
+                            Return to Homepage
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Objectives Details Section -->
+            <section id="objectives-details-section" class="hidden min-h-screen bg-gray-100 p-4 lg:p-12">
+                <div class="container mx-auto max-w-5xl">
+                    <!-- Header -->
+                    <div class="mb-8 flex items-center justify-between">
+                        <div>
+                            <h1 class="text-3xl lg:text-4xl font-extrabold text-blue-900 leading-tight">Objectives & Success Criteria</h1>
+                            <p class="text-indigo-600 font-medium text-lg mt-2">The Roadmap to Student Success</p>
+                        </div>
+                        <button onclick="window.location.hash=''" class="hidden md:flex items-center text-gray-500 hover:text-blue-900 transition-colors">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                            Back to Guide
+                        </button>
+                    </div>
+
+                    <!-- Video Container -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+                        <div class="aspect-video bg-black relative w-full">
+                            <video controls class="w-full h-full absolute top-0 left-0">
+                                <source src="Objectives_&_Success_Criteria.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="p-6 bg-indigo-50 border-t border-indigo-100">
+                            <h3 class="font-bold text-indigo-900 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                About this Module
+                            </h3>
+                            <p class="text-sm text-indigo-800 mt-1">A comprehensive guide on transforming lesson plans from "To-Do lists" into meaningful learning journeys using tiered success criteria.</p>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Table -->
+                    <div class="mb-16">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Comparing Components</h3>
+                        <div class="grid md:grid-cols-2 gap-0 overflow-hidden rounded-2xl shadow-2xl border border-gray-200">
+                            <!-- Column 1: Objectives -->
+                            <div class="bg-blue-900 text-white p-8">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-4xl mr-3">🎯</span>
+                                    <h3 class="text-2xl font-bold">Lesson Objective</h3>
+                                </div>
+                                <p class="text-blue-200 font-medium mb-6 uppercase tracking-wide text-xs">The Destination</p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <span class="mt-1 mr-3 text-green-400">✓</span>
+                                        <span class="text-blue-50">Defines <strong>WHAT</strong> students will learn conceptually.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="mt-1 mr-3 text-green-400">✓</span>
+                                        <span class="text-blue-50">Teacher-focused perspective.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="mt-1 mr-3 text-green-400">✓</span>
+                                        <span class="text-blue-50">Broad & Skill-based (e.g., "Analyze", "Evaluate").</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Column 2: Success Criteria -->
+                            <div class="bg-teal-600 text-white p-8">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-4xl mr-3">🔍</span>
+                                    <h3 class="text-2xl font-bold">Success Criteria</h3>
+                                </div>
+                                <p class="text-teal-200 font-medium mb-6 uppercase tracking-wide text-xs">The Roadmap</p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <span class="mt-1 mr-3 text-yellow-300">✓</span>
+                                        <span class="text-teal-50">Shows <strong>HOW</strong> to demonstrate learning.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="mt-1 mr-3 text-yellow-300">✓</span>
+                                        <span class="text-teal-50">Student-focused checklist.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="mt-1 mr-3 text-yellow-300">✓</span>
+                                        <span class="text-teal-50">Specific & Measurable actions.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tiered Success Criteria Section -->
+                    <div class="mb-12">
+                        <div class="text-center mb-8">
+                            <h3 class="text-3xl font-bold text-gray-900">Tiered Differentiation</h3>
+                            <p class="text-gray-600 mt-2">Maximize learning by offering multiple entry points.</p>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <!-- Level 1 -->
+                            <div class="bg-white rounded-xl shadow-lg border-t-8 border-green-500 overflow-hidden card-hover">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h4 class="text-xl font-bold text-gray-800">Level 1</h4>
+                                        <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Support</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                        Scaffolding for students who need concrete representations.
+                                    </p>
+                                    <div class="bg-green-50 p-3 rounded text-sm text-green-900 italic">
+                                        "I can use physical blocks to show the problem."
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Level 2 -->
+                            <div class="bg-white rounded-xl shadow-lg border-t-8 border-blue-500 overflow-hidden card-hover transform md:-translate-y-2">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h4 class="text-xl font-bold text-gray-800">Level 2</h4>
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Core</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                        Standard expectation for independent work.
+                                    </p>
+                                    <div class="bg-blue-50 p-3 rounded text-sm text-blue-900 italic">
+                                        "I can solve the problem using standard formulas."
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Level 3 -->
+                            <div class="bg-white rounded-xl shadow-lg border-t-8 border-purple-500 overflow-hidden card-hover">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h4 class="text-xl font-bold text-gray-800">Level 3</h4>
+                                        <span class="bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded">Challenge</span>
+                                    </div>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                        Extension requiring explanation, justification, or creation.
+                                    </p>
+                                    <div class="bg-purple-50 p-3 rounded text-sm text-purple-900 italic">
+                                        "I can teach a peer how to solve this complex version."
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="bg-gradient-to-r from-indigo-600 to-blue-700 rounded-xl p-8 text-center text-white shadow-xl">
+                        <h3 class="text-2xl font-bold mb-4">🚀 This Week's Challenge: Extreme Makeover</h3>
+                        <p class="max-w-2xl mx-auto text-lg text-indigo-100 mb-8">
+                            Take one of your lesson plans this week and give one objective an "Extreme Makeover." Ensure it focuses on cognitive skills and includes tiered success criteria.
+                        </p>
+                        <button onclick="window.location.hash=''" class="bg-white text-indigo-700 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                            I'm Ready! Return to Dashboard
+                        </button>
+                    </div>
+                    
+                     <!-- Mobile Return Button -->
+                    <div class="mt-8 md:hidden text-center">
+                         <button class="text-gray-500 hover:text-blue-900 underline" onclick="window.location.hash=''">
+                            Return to Homepage
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MAP Details Section -->
+            <section id="map-details-section" class="hidden min-h-screen bg-gray-100 p-4 lg:p-12">
+                <div class="container mx-auto max-w-5xl">
+                    <!-- Header -->
+                    <div class="mb-8 flex items-center justify-between">
+                        <div>
+                            <h1 class="text-3xl lg:text-4xl font-extrabold text-blue-900 leading-tight">MAP Growth Testing</h1>
+                            <p class="text-orange-600 font-medium text-lg mt-2">Measures of Academic Progress</p>
+                        </div>
+                        <button onclick="window.location.hash=''" class="hidden md:flex items-center text-gray-500 hover:text-blue-900 transition-colors">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                            Back to Guide
+                        </button>
+                    </div>
+
+                    <!-- Video Container -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+                        <div class="aspect-video bg-black relative w-full">
+                            <iframe class="w-full h-full absolute top-0 left-0" 
+                                    src="https://www.youtube.com/embed/79h958Qd8sA" 
+                                    title="What is the MAP Growth test?" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-6 bg-orange-50 border-t border-orange-100">
+                            <h3 class="font-bold text-orange-900 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                About this Module
+                            </h3>
+                            <p class="text-sm text-orange-800 mt-1">An essential guide for teachers and parents to understand how MAP Growth works, what RIT scores mean, and how to use the data to support student learning.</p>
+                        </div>
+                    </div>
+
+                    <!-- Content Grid -->
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                <span class="bg-blue-100 p-2 rounded-full mr-3 text-blue-600 text-sm">🧩</span>
+                                What is MAP Growth?
+                            </h3>
+                            <p class="text-gray-600 mb-4">MAP Growth is not a traditional standardized test. It is an <strong>adaptive assessment</strong> designed to measure a student's academic growth over time, regardless of their grade level.</p>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> If a student answers correctly, the next question gets harder.</li>
+                                <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> If they answer incorrectly, the next question gets easier.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                <span class="bg-purple-100 p-2 rounded-full mr-3 text-purple-600 text-sm">📊</span>
+                                Understanding RIT Scores
+                            </h3>
+                            <p class="text-gray-600 mb-4">The result of the test is a <strong>RIT Score</strong> (Rasch Unit). Think of this like a ruler for academic growth.</p>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex items-start"><span class="text-purple-500 mr-2">➜</span> It is an equal-interval scale (like inches on a ruler).</li>
+                                <li class="flex items-start"><span class="text-purple-500 mr-2">➜</span> It tracks progress from year to year, not just within a single grade.</li>
+                                <li class="flex items-start"><span class="text-purple-500 mr-2">➜</span> It connects directly to instructional areas students are ready to learn.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Return Button -->
+                    <div class="mt-8 md:hidden text-center">
+                         <button class="text-gray-500 hover:text-blue-900 underline" onclick="window.location.hash=''">
+                            Return to Homepage
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Twinkl Details Section -->
+            <section id="twinkl-details-section" class="hidden min-h-screen bg-pink-50 p-4 lg:p-12">
+                <div class="container mx-auto max-w-4xl">
+                    <!-- Header -->
+                    <div class="mb-12 flex items-center justify-between">
+                        <div>
+                            <h1 class="text-3xl lg:text-4xl font-extrabold text-pink-900 leading-tight">Twinkl Educational Resources</h1>
+                            <p class="text-pink-600 font-medium text-lg mt-2">Trusted by teachers worldwide</p>
+                        </div>
+                        <button onclick="window.location.hash=''" class="hidden md:flex items-center text-gray-500 hover:text-pink-900 transition-colors">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                            Back to Guide
+                        </button>
+                    </div>
+
+                    <!-- Main Info Card -->
+                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-pink-100 mb-10">
+                        <div class="p-10 text-center">
+                            <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span class="text-4xl">⭐</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">What is Twinkl?</h2>
+                            <p class="text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto">
+                                Twinkl provides instant access to a complete range of teacher-created, engaging, and inspiring teaching, planning, and assessment materials. From worksheets and lesson plans to interactive games and PowerPoints, Twinkl supports educators in delivering high-quality lessons across all subjects and age groups.
+                            </p>
+                            
+                            <a href="https://www.twinkl.ae/" target="_blank" rel="noopener noreferrer">
+                                <button class="bg-pink-600 text-white font-bold py-4 px-10 rounded-full hover:bg-pink-700 transition-all transform hover:scale-105 shadow-lg flex items-center mx-auto">
+                                    Access Twinkl UAE <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Credentials Card -->
+                    <div class="bg-white rounded-3xl shadow-xl border-l-8 border-pink-600 p-8 lg:p-10">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
+                            School Login Credentials
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-6">Click on the fields below to copy the login details directly to your clipboard.</p>
+
+                        <div class="space-y-4">
+                            <!-- Username -->
+                            <div class="group relative">
+                                <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Username</label>
+                                <div id="copy-twinkl-user" class="bg-gray-50 border border-gray-200 rounded-xl p-4 flex justify-between items-center cursor-pointer hover:bg-pink-50 hover:border-pink-200 transition-colors">
+                                    <span class="font-mono text-gray-800 font-medium break-all">hanan.elhalabi@gmail.com</span>
+                                    <svg class="w-5 h-5 text-gray-400 group-hover:text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div id="twinkl-user-msg" class="absolute right-0 top-0 -mt-2 bg-black text-white text-xs py-1 px-2 rounded hidden">Copied!</div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="group relative">
+                                <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Password</label>
+                                <div id="copy-twinkl-pass" class="bg-gray-50 border border-gray-200 rounded-xl p-4 flex justify-between items-center cursor-pointer hover:bg-pink-50 hover:border-pink-200 transition-colors">
+                                    <span class="font-mono text-gray-800 font-medium">ENS@123456789</span>
+                                    <svg class="w-5 h-5 text-gray-400 group-hover:text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div id="twinkl-pass-msg" class="absolute right-0 top-0 -mt-2 bg-black text-white text-xs py-1 px-2 rounded hidden">Copied!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Container -->
+                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-pink-100 mb-10">
+                        <div class="aspect-video bg-black relative w-full">
+                            <iframe class="w-full h-full absolute top-0 left-0" 
+                                    src="https://www.youtube.com/embed/eJ-1zpEnzbs" 
+                                    title="How to Find Resources on the Twinkl Website" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-6 bg-pink-50 border-t border-pink-100">
+                            <h3 class="font-bold text-pink-900 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Quick Start Guide
+                            </h3>
+                            <p class="text-sm text-pink-800 mt-1">Learn how to efficiently find and download the exact resources you need for your lessons.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Return -->
+                    <div class="mt-12 text-center md:hidden">
+                         <button class="text-gray-500 hover:text-pink-900 underline" onclick="window.location.hash=''">
+                            Return to Homepage
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Help Section -->
+            <section id="help-section" class="hidden min-h-screen bg-gray-50 flex items-center justify-center p-4">
+                <div class="text-center bg-white p-8 sm:p-12 rounded-lg shadow-xl max-w-md w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-blue-800 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.79 4 4 0 1.98-1.79 4-4 4-1.742 0-3.223-.835-3.772-2M12 18.5v.01M12 4.5v.01M4.5 12v.01M19.5 12v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h1 class="text-3xl font-bold text-blue-900 mb-2">Need Assistance?</h1>
+                    <p class="text-gray-600 mb-8">Contact the Head of Teaching and Learning for any questions or support with the T&L Guide.</p>
+                    
+                    <div class="space-y-4 text-left bg-gray-50 p-6 rounded-lg">
+                        <div>
+                            <strong class="text-gray-900">Email:</strong>
+                            <div class="flex items-center space-x-2">
+                                <p id="copy-email" class="block text-blue-600 cursor-pointer hover:underline">brandon.walid@aisa.sch.ae</p>
+                                <span id="email-copied-msg" class="text-sm text-green-600 hidden">Copied!</span>
+                            </div>
+                        </div>
+                        <div>
+                            <strong class="text-gray-900">Phone / WhatsApp:</strong>
+                            <div class="flex items-center space-x-2">
+                                <p id="copy-phone" class="block text-blue-600 cursor-pointer hover:underline">+971 50 789 6519</p>
+                                <span id="phone-copied-msg" class="text-sm text-green-600 hidden">Copied!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="window.location.hash=''" class="mt-8 bg-blue-800 text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors w-full sm:w-auto">
+                        Return to Homepage
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Floating Help Button -->
+        <button onclick="window.location.hash='help'" class="fixed bottom-6 right-6 bg-blue-800 text-white p-4 rounded-full shadow-lg hover:bg-blue-900 transition-colors z-40 flex items-center justify-center" aria-label="Ask for help">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.79 4 4 0 1.98-1.79 4-4 4-1.742 0-3.223-.835-3.772-2M12 18.5v.01M12 4.5v.01M4.5 12v.01M19.5 12v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </button>
+
+        <!-- Footer -->
+        <footer class="bg-blue-900 text-white mt-auto">
+            <div class="container mx-auto px-6 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                    <div class="mb-4 md:mb-0">
+                        <h5 class="font-bold text-lg">American International School in Abu Dhabi</h5>
+                        <p class="text-sm text-blue-200">Inspiring Excellence</p>
+                    </div>
+                    <div class="text-sm text-blue-200 mb-4 md:mb-0">
+                        <p>&copy; 2026 American International School in Abu Dhabi. All Rights Reserved.</p>
+                        <p>This page was developed by the Head of Teaching and Learning (2026).</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // --- 1. CONFIGURATION & STATE ---
+        const routes = {
+            '#module-hots': 'hots-details-section',
+            '#module-objectives': 'objectives-details-section',
+            '#module-map': 'map-details-section',
+            '#module-twinkl': 'twinkl-details-section',
+            '#help': 'help-section',
+            '#maintenance': 'maintenance-section',
+            '': 'main-content' // Default
+        };
+
+        // --- 2. DEEP LINKING / ROUTING LOGIC ---
+        
+        function handleHashChange() {
+            const hash = window.location.hash;
+            
+            // Special handling for anchor links within the main page
+            if (hash.includes('-section') && !Object.values(routes).includes(hash.substring(1))) {
+                showSection('main-content');
+                return;
+            }
+
+            const targetSectionId = routes[hash] || routes[''];
+            showSection(targetSectionId);
+
+            // Special Video Handling (Auto-pause if leaving)
+            if (targetSectionId !== 'objectives-details-section') {
+                const video = document.querySelector('#objectives-details-section video');
+                if (video) video.pause();
+            }
+            if (targetSectionId !== 'map-details-section') {
+                const iframe = document.querySelector('#map-details-section iframe');
+                if (iframe) {
+                     // Reloading iframe stops the video
+                    const src = iframe.src;
+                    iframe.src = src; 
+                }
+            }
+        }
+
+        function showSection(sectionId) {
+            // Hide all potential sections first
+            const allSections = Object.values(routes);
+            allSections.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
+            });
+
+            // Show target
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.remove('hidden');
+                // Scroll to top when switching full "pages"
+                if(sectionId !== 'main-content') {
+                     window.scrollTo(0, 0);
+                }
+            }
+        }
+
+        // Initialize Router
+        window.addEventListener('hashchange', handleHashChange);
+        window.addEventListener('load', handleHashChange);
+
+        // --- 3. MAINTENANCE LINKS INTERCEPT ---
+        document.querySelectorAll('.maintenance-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.hash = 'maintenance';
+            });
+        });
+
+        // --- 4. SEARCH FUNCTIONALITY ---
+        const searchInput = document.getElementById('global-search');
+        const searchableItems = document.querySelectorAll('.searchable-item');
+
+        if(searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                
+                searchableItems.forEach(item => {
+                    const keywords = item.getAttribute('data-keywords') || '';
+                    const text = item.innerText.toLowerCase();
+                    const match = text.includes(term) || keywords.includes(term);
+                    
+                    if (match) {
+                        item.style.display = ''; // Reset to default (block/flex)
+                        item.classList.remove('opacity-25', 'grayscale');
+                    } else {
+                        // We hide it completely to remove clutter
+                        item.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Optional: Keyboard shortcut (Cmd/Ctrl + K)
+            document.addEventListener('keydown', (e) => {
+                if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                    e.preventDefault();
+                    searchInput.focus();
+                }
+            });
+        }
+
+        // --- 5. CLIPBOARD LOGIC ---
+        const copyEmailEl = document.getElementById('copy-email');
+        const copyPhoneEl = document.getElementById('copy-phone');
+        const emailCopiedMsg = document.getElementById('email-copied-msg');
+        const phoneCopiedMsg = document.getElementById('phone-copied-msg');
+
+        // Twinkl Elements
+        const copyTwinklUserEl = document.getElementById('copy-twinkl-user');
+        const copyTwinklPassEl = document.getElementById('copy-twinkl-pass');
+        const twinklUserMsg = document.getElementById('twinkl-user-msg');
+        const twinklPassMsg = document.getElementById('twinkl-pass-msg');
+
+        function copyToClipboard(text, msgElement) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed'; 
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                if (msgElement) {
+                    msgElement.classList.remove('hidden');
+                    // Hide other messages relative to context if needed, but simple timeout works best
+                    setTimeout(() => {
+                        msgElement.classList.add('hidden');
+                    }, 2000);
+                }
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+            document.body.removeChild(textarea);
+        }
+
+        if (copyEmailEl) {
+            copyEmailEl.addEventListener('click', () => {
+                copyToClipboard('brandon.walid@aisa.sch.ae', emailCopiedMsg);
+            });
+        }
+
+        if (copyPhoneEl) {
+            copyPhoneEl.addEventListener('click', () => {
+                copyToClipboard('+971507896519', phoneCopiedMsg);
+            });
+        }
+
+        // Twinkl Listeners
+        if (copyTwinklUserEl) {
+            copyTwinklUserEl.addEventListener('click', () => {
+                copyToClipboard('hanan.elhalabi@gmail.com', twinklUserMsg);
+            });
+        }
+
+        if (copyTwinklPassEl) {
+            copyTwinklPassEl.addEventListener('click', () => {
+                copyToClipboard('ENS@123456789', twinklPassMsg);
+            });
+        }
+
+    </script>
+
+</body>
+</html>
