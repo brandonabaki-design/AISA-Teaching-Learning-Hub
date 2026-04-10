@@ -64,7 +64,7 @@
                 
                 <!-- Logo Section -->
                 <div class="flex items-center gap-4 cursor-pointer group" onclick="window.location.hash=''">
-                    <img src="AISA_logo.png" alt="AISA Logo" class="h-10 w-10 md:h-12 md:w-12 object-contain transition-transform group-hover:scale-105">
+                    <img src="AISA_logo.png" alt="AISA Logo" class="h-10 w-10 md:h-12 md:w-12 object-contain transition-transform group-hover:scale-105" onerror="this.src='https://via.placeholder.com/150/003366/FFFFFF?text=AISA'">
                     <div class="flex flex-col justify-center">
                         <h1 class="text-lg md:text-xl font-black text-blue-900 tracking-tight leading-none uppercase">AISA</h1>
                         <span class="text-[9px] md:text-[10px] font-semibold text-gray-500 uppercase tracking-widest mt-0.5">American International School</span>
@@ -253,8 +253,6 @@
                         <div class="p-6 md:p-10 bg-teal-50/30">
                              <!-- Grid for filtering -->
                              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                                 <!-- Twinkl Module -->
                             
                             <!-- Tool 1: Gemini Storybooks -->
                             <a href="https://gemini.google/overview/storybook/" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="gemini storybooks ai reading english">
@@ -283,6 +281,15 @@
                                 </div>
                             </a>
 
+                            <!-- Tool 4: EduSim -->
+                            <a href="https://gemini.google.com/gem/11QD4AkTJjpXVgEGw8SJ74nq99ntDfv8V?usp=sharing" target="_blank" rel="noopener noreferrer" class="block searchable-item" data-keywords="edusim simulation ai agent coding generator interactive experiences gemini">
+                                <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-yellow-100">
+                                    <div class="text-4xl text-blue-600 mb-3">🤖</div>
+                                    <h4 class="text-lg font-semibold mb-2">EduSim</h4>
+                                    <p class="text-sm text-gray-600">An advanced AI agent that instantly codes high-quality, interactive educational simulations tailored to your curriculum.</p>
+                                </div>
+                            </a>
+
                             <!-- Strategy Card -->
                             <a href="#" class="maintenance-link block searchable-item" data-keywords="differentiation needs inclusive support">
                                 <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full">
@@ -306,7 +313,8 @@
                                 <button onclick="window.location.hash='module-twinkl'" class="block w-full text-left h-full">
                                     <div class="bg-white p-6 rounded-lg shadow-lg card-hover transition-all duration-300 text-center h-full border border-pink-100 flex flex-col items-center justify-center">
                                         <div class="mb-3 h-12 w-full flex items-center justify-center">
-                                            <img src="nwea_MAP_logo.jpg" alt="NWEA MAP Logo" class="h-10 object-contain">
+                                            <img src="nwea_MAP_logo.jpg" alt="NWEA MAP Logo" class="h-10 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                            <span style="display:none;" class="text-4xl">📈</span>
                                         </div>
                                         <h4 class="text-lg font-bold mb-2">MAP Growth Guide</h4>
                                         <p class="text-sm text-gray-600">Understand the adaptive nature of MAP testing and RIT scores.</p>
